@@ -1,7 +1,3 @@
-package com.mouredev.weeklychallenge2022
-
-import java.math.BigInteger
-
 /*
  * Reto #2
  * LA SUCESIÓN DE FIBONACCI
@@ -10,7 +6,8 @@ import java.math.BigInteger
  * Dificultad: DIFÍCIL
  *
  * Enunciado: Escribe un programa que imprima los 50 primeros números de la sucesión de Fibonacci empezando en 0.
- * La serie Fibonacci se compone por una sucesión de números en la que el siguiente siempre es la suma de los dos anteriores.
+ * La serie Fibonacci se compone por una sucesión de números en la que el siguiente siempre es la suma de los dos
+ *  anteriores.
  * 0, 1, 1, 2, 3, 5, 8, 13...
  *
  * Información adicional:
@@ -21,17 +18,25 @@ import java.math.BigInteger
  *
  */
 
-fun main() {
+const fibonacci = () => {
+  let v1 = 1;
+  let v2 = 1;
+  let vT = 0;
+  let vM = 1;
 
-    var n0: Long = 0
-    var n1: Long = 1
-
-    (1..50).forEach { _ ->
-
-        println(n0)
-
-        val fib = n0 + n1
-        n0 = n1
-        n1 = fib
+  for (i = 0; i < 50; i++) {
+    if (i < 2) {
+      console.log(i);
+    } else if (i === 2) {
+      console.log(v1);
+    } else {
+      vT = v2;
+      v2 = vM;
+      v1 = vT;
+      vM = v2 + v1;
+      console.log(vM);
     }
-}
+  }
+};
+
+fibonacci();
