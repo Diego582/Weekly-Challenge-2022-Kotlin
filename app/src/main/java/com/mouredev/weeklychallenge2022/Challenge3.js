@@ -1,4 +1,4 @@
-package com.mouredev.weeklychallenge2022
+
 
 /*
  * Reto #3
@@ -18,7 +18,7 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
+/* fun main() {
 
     (1..100).forEach { number ->
         if (isPrime(number)) {
@@ -40,7 +40,7 @@ private fun isPrime(number: Int): Boolean {
     }
 
     return true
-}
+} */
 
 
 

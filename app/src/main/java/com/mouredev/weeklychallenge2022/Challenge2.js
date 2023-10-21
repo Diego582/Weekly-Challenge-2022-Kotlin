@@ -39,4 +39,19 @@ const fibonacci = () => {
   }
 };
 
+const fibonacci2 = () => {
+let values=[0,1]
+let secPosition=1
+
+for (i=0;i<50;i++){
+    console.log(values[i])
+    values.push(values[i]+values[secPosition])
+    secPosition++
+}
+
+}
+
+
 fibonacci();
+fibonacci2();
+
