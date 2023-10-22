@@ -1,5 +1,3 @@
-
-
 /*
  * Reto #3
  * ¿ES UN NÚMERO PRIMO?
@@ -18,29 +16,18 @@
  *
  */
 
-/* fun main() {
-
-    (1..100).forEach { number ->
-        if (isPrime(number)) {
-            println(number)
-        }
+const numerosPrimos = () => {
+  for (i = 1; i <= 100; i++) {
+    if (i <= 3) {
+      console.log(i + " es primo");
+    } else {
+      if (i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0) {
+        console.log(i + " no es primo");
+      } else {
+        console.log(i + " es primo");
+      }
     }
-}
+  }
+};
 
-private fun isPrime(number: Int): Boolean {
-
-    if (number < 2) {
-        return false
-    }
-
-    for (i in 2 until number) {
-        if (number % i == 0) {
-            return false
-        }
-    }
-
-    return true
-} */
-
-
-
+numerosPrimos();
