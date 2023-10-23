@@ -1,4 +1,3 @@
-package com.mouredev.weeklychallenge2022
 
 /*
  * Reto #8
@@ -7,7 +6,8 @@ package com.mouredev.weeklychallenge2022
  * Fecha publicación resolución: 02/03/22
  * Dificultad: FÁCIL
  *
- * Enunciado: Crea un programa se encargue de transformar un número decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
+ * Enunciado: Crea un programa se encargue de transformar un número decimal a binario sin utilizar funciones 
+ * propias del lenguaje que lo hagan directamente.
  *
  * Información adicional:
  * - Usa el canal de nuestro discord (https://mouredev.com/discord) "🔁reto-semanal" para preguntas, dudas o prestar ayuda a la acomunidad.
@@ -17,24 +17,5 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
-    println(decimalToBinary(387))
-    println(decimalToBinary(0))
-}
 
-fun decimalToBinary(decimal: Int): String {
-
-    var number = decimal
-    var binary = ""
-
-    while (number != 0) {
-
-        val reminder = number % 2
-        number /= 2
-
-        binary = "$reminder$binary"
-    }
-
-    return binary.ifEmpty { "0" }
-}
 

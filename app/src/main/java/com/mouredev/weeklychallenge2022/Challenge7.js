@@ -1,5 +1,3 @@
-package com.mouredev.weeklychallenge2022
-
 /*
  * Reto #7
  * CONTANDO PALABRAS
@@ -20,27 +18,5 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
-    countWords("Hola, mi nombre es brais. Mi nombre completo es Brais Moure (MoureDev).")
-}
 
-fun countWords(text: String) {
-
-    val words = mutableMapOf<String, Int>()
-
-    text.lowercase().replace("[^a-z0-9]".toRegex(), " ").split(" ").forEach { key ->
-        if (key.isEmpty()) {
-            return@forEach
-        }
-        if (words[key] != null) {
-            words[key] = words.getValue(key) + 1
-        } else {
-            words[key] = 1
-        }
-    }
-
-    words.forEach { word ->
-        println("${word.key} se ha repetido ${word.value} ${if(word.value == 1) "vez" else "veces"}")
-    }
-}
 
